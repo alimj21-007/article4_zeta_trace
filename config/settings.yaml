@@ -1,0 +1,56 @@
+# settings.yaml — Project configuration for Article 4
+# Author: Seyed Ali Mozhgani
+# Date: December 2025
+
+project:
+  name: "Article 4 — Trace Formulas and Spectral Counting"
+  version: "1.0"
+  author: "Seyed Ali Mozhgani"
+  date: "2025-12-03"
+
+paths:
+  code_dir: "code/"
+  data_dir: "output/data/"
+  figures_dir: "output/figures/"
+  logs_dir: "output/logs/"
+  docs_dir: "docs/"
+  notebooks_dir: "notebooks/"
+
+data_files:
+  - spectval_vs_zeta.csv
+  - error_bounds.csv
+
+figures:
+  - comparison_plot.png
+  - spacing_plot.png
+  - density_plot.png
+  - trace_plot.png
+
+modules:
+  - operators.py
+  - kernels.py
+  - trace_formula.py
+  - counting.py
+  - plots.py
+  - utils.py
+
+documentation:
+  - abstract.md
+  - faq.md
+  - media_checklist.md
+
+parameters:
+  eigenvalue_scale: 2.5
+  normalization_shift: 10.0
+  normalization_factor: 0.5
+  trace_t_range: [0.01, 0.1]
+  trace_t_steps: 20
+  density_bins: 20
+
+logging:
+  level: "INFO"
+  logfile: "output/logs/run.log"
+
+output:
+  format: "pdf"
+  latex_file: "article4.tex"
